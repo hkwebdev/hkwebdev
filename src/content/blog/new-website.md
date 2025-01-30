@@ -1,7 +1,7 @@
 ---
 title: 'New Website'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jan 20 2025'
+pubDate: 'Jan 30 2025'
 heroImage: '/blog-placeholder-2.jpg'
 ---
 

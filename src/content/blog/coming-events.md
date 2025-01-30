@@ -5,4 +5,4 @@ pubDate: 'Jan 30 225'
 heroImage: '/blog-placeholder-4.jpg'
 ---
 
-Cming soon
+Coming soon
