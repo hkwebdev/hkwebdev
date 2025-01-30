@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Hello, Hong Kong!</h1>
+			<h2>
+				Welcome to the Hong Kong Web Developer Group (HKWD)!
+			</h2>
+			
+			<p>
+				Join us at HKWD, a vibrant monthly meetup based in Hong Kong, dedicated to fostering growth within the local and greater Asian web developer communities. This month, our group is proudly self-funded, and we deeply appreciate the support from our hosts, volunteers, and venues.
+			</p>
+			
+			<h2>
+				Who We Are:
+			</h2>
+			
+			
+			
+			<p>
+				We are a passionate collective of developers, technologists, designers, and creatives who share a love for Web Technology. Our journey encompasses all things web, including frontend and backend development, design, AI, hardware, and IoT innovations like Raspberry Pis and ESP32s, as well as AR/VR/XR. With the web being integral to so many aspects of modern technology, our main objective is to share knowledge and learn from one another.
+			</p>
+			<p>Here are a few ideas topics ad highlights:</p>
+			<ul>
+				<li>Local first development</li>
+				<li>GenAI with Azure OpenAI by Rhys Turner</li>
+				<li>Small projects by patrick Rabier</li>
+				<li>Learning React Native</li>
+			</ul>
+			<p>Join us to explore, innovate, and connect with like-minded individuals who are passionate about shaping the future of web technology.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
