@@ -1,0 +1,36 @@
+name: publish-pages
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  publish:
+    name: Publish HKWD website
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 23
+
+      - name: Install dependencies
+        working-directory: .
+        run: npm install
+
+      - name: Build
+        working-directory: .
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_TOKEN }}
+          publish_dir: ./dist
+          cname: hkwebdev.com
