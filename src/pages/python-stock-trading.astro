@@ -1,4 +1,5 @@
 ---
+import { string } from 'astro:schema';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
@@ -8,7 +9,7 @@ import Layout from '../layouts/BlogPost.astro';
 	pubDate={new Date('Nov 14 2025')}
 	heroImage="/blog-placeholder-about.jpg"
 >
-	<h1>Title: Python for Stock Trading: A Comprehensive 4-Week Course</h1>
+<h1>Python for Stock Trading: A Comprehensive 4-Week Course</h1>
 
 <h2>Week 1: Introduction to Python and Financial Markets</h2>
 
@@ -221,7 +222,7 @@ import json</li>
 
 <h4>Loading JSON data</h4>
 
-<p>with open(‘data.json’) as f:</p>
+<p>with open("data.json") as f:</p>
 
 <pre><code>data = json.load(f)
 </code></pre>
@@ -267,9 +268,9 @@ data = pd.read_csv(“AAPL.csv”)</li>
 
 <p>data.dropna(inplace=True)</p>
 
-<p>data[‘Date’] = pd.to_datetime(data[‘Date’])</p>
+<p>data["Date"] = pd.to_datetime(data["Date"])</p>
 
-<p>data.set_index(‘Date’, inplace=True)</p>
+<p>data.set_index("Date", inplace=True)</p>
 
 <p>```</p>
 
@@ -286,7 +287,7 @@ return data.rolling(window=period).mean()</li>
 
 <h4>Calculate SMA of 20 days for close price</h4>
 
-<p>data[‘SMA_20’] = sma(data[‘Close’], 20)</p>
+<p>data["SMA_20"] = sma(data["Close"], 20)</p>
 
 <p>```</p>
 
@@ -301,7 +302,7 @@ return data.rolling(window=period).mean()</li>
 
 <p>def rsi(data, period):</p>
 
-<p>deltas = data[‘Close’].diff()</p>
+<p>deltas = data["Close"].diff()</p>
 
 <p>gains = deltas.where(deltas &gt; 0, 0)</p>
 
@@ -319,7 +320,7 @@ return rsi</li>
 
 <h4>Calculate RSI of 14 days for AAPL stock</h4>
 
-<p>data[‘RSI_14’] = rsi(data, 14)</p>
+<p>data["RSI_14"] = rsi(data, 14)</p>
 
 <p>```</p>
 
@@ -349,9 +350,9 @@ elif data.loc[i]['RSI_14'] &gt; 70:
 
 <h4>Initialize portfolio and account balance</h4>
 
-<p>portfolio = {’AAPL’: 0}</p>
+<p>portfolio = {String(`{"AAPL": 0}`)}</p>
 balance = 100000</li>
-</ul>
+</ul\>
 
 <h4>Define a function for buying and selling stocks</h4>
 
@@ -449,8 +450,8 @@ Machine Learning can help identify patterns and optimize strategies using histor
 
 <h4>Adding more stocks to the portfolio</h4>
 
-<p>portfolio[‘GOOG’] = 0</p>
-portfolio[‘MSFT’] = 0</li>
+<p>portfolio["GOOG"] = 0</p>
+portfolio["MSFT"] = 0</li>
 </ul>
 
 <h4>Function for calculating portfolio return</h4>
@@ -485,13 +486,13 @@ Diversification helps reduce the risk of a portfolio by investing in different a
 
 <p>def calculate_volatility(data):</p>
 
-<p>daily_returns = data[‘Close’].pct_change()</p>
+<p>daily_returns = data["Close"].pct_change()</p>
 return np.std(daily_returns) * np.sqrt(252)</li>
 </ul>
 
 <h4>Calculate volatility for AAPL stock</h4>
 
-<p>data[‘Volatility’] = calculate_volatility(data)</p>
+<p>data["Volatility"] = calculate_volatility(data)</p>
 
 <p>```</p>
 
