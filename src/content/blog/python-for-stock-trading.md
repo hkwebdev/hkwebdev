@@ -1,13 +1,11 @@
 ---
-title: 'Python for Stock Trading'
+title: 'Python for Stock Trading: A Comprehensive 4-Week Course'
 description: 'In this 4-week course, learn how to use Python for stock trading, mastering financial markets, technical analysis techniques, algorithmic strategies, portfolio management, and real-time data acquisition. Gain practical experience in building a comprehensive trading bot, using key libraries like Pandas, and optimizing portfolios with machine learning algorithms.'
 pubDate: 'Nov 14 2025'
 heroImage: '/blog-placeholder-3.jpg'
 author: 'Rhys Turner'
 tags: ['course', 'python', 'finance', 'stocks']
 ---
-
-# Title: Python for Stock Trading: A Comprehensive 4-Week Course
 
 ## Week 1: Introduction to Python and Financial Markets
 
