@@ -14,6 +14,7 @@ const blog = defineCollection({
 		heroImage: z.string().optional(),
 		author: z.string().optional(),
 		tags: z.array(z.string()).optional(),
+			lumaEventId: z.string().optional(),
 		draft: z.boolean().optional(),
 	}),
 });
